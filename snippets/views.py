@@ -9,7 +9,7 @@ from snippets.serializers import SnippetsSerializer, UserSerializer
 from rest_framework import renderers
 from rest_framework import viewsets
     
-class SnippetsViewSets(viewsets.ReadOnlyModelViewSet):
+class SnippetsViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Snippets.objects.all()
     serializer_class = SnippetsSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly]
